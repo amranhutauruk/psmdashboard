@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up()
    {
-      Schema::create('productions', function (Blueprint $table) {
+      Schema::create('chart_data', function (Blueprint $table) {
          $table->id();
-         $table->float('estate_1');
-         $table->float('estate_2');
-         $table->float('plasma');
+         $table->date('input_date'); // Tanggal input
+         $table->float('estate_1');  // Nilai Estate 1
+         $table->float('estate_2');  // Nilai Estate 2
+         $table->float('plasma');    // Nilai Plasma
          $table->timestamps();
       });
    }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('productions');
+        Schema::dropIfExists('chart_data');
     }
 };

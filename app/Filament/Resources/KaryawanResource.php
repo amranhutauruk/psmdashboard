@@ -49,7 +49,7 @@ class KaryawanResource extends Resource
                                 'Buddha' => 'Buddha'
                             ]),
                     ])
-                    ->columns(2),
+                  //   ->columns(2),
             ]);
     }
 
