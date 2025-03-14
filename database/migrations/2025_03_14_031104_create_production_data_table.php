@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('laporan_produksis', function (Blueprint $table) {
+        Schema::create('production_data', function (Blueprint $table) {
             $table->id();
-            $table->float('estate_1');
-            $table->float('estate_2');
-            $table->float('plasma');
+            $table->integer('year');
+            $table->json('data'); // Menyimpan data produksi dalam format JSON
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('laporan_produksis');
+        Schema::dropIfExists('production_data');
     }
 };

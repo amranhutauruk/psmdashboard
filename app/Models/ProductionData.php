@@ -5,12 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class LaporanProduksi extends Model
+class ProductionData extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'estate_1',
-        'estate_2',
-        'plasma',
+        'year',
+        'data',
+    ];
+
+    protected $casts = [
+        'data' => 'array',
     ];
 }

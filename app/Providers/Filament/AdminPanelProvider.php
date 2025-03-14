@@ -37,12 +37,6 @@ class AdminPanelProvider extends PanelProvider
             ->colors([
                 'primary' => Color::Amber,
             ])
-            ->navigationItems([
-                NavigationItem::make('Laporan Produksi')
-                    ->url(fn (): string => LaporanProduksiResource::getUrl())
-                    ->icon('heroicon-o-document-text')
-                    ->sort(2),
-            ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
